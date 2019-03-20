@@ -1,0 +1,7 @@
+verilog work "store_module.v"
+verilog work "seven_seg_driver.v"
+verilog work "output.v"
+verilog work "display_driver.v"
+verilog work "decoder_38.v"
+verilog work "clk_divider.v"
+verilog work "top_module.v"

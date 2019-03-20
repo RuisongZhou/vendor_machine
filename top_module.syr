@@ -1,0 +1,832 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\store_module.v" into library work
+Parsing module <Store_FSM>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\seven_seg_driver.v" into library work
+Parsing module <seven_seg_driver>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\output.v" into library work
+Parsing module <FSM_output>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\display_driver.v" into library work
+Parsing module <display_driver>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\decoder_38.v" into library work
+Parsing module <decoder_38>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\clk_divider.v" into library work
+Parsing module <clk_divider>.
+Analyzing Verilog file "F:\FPGAcode\vendor_machine\top_module.v" into library work
+Parsing module <top_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_module>.
+
+Elaborating module <clk_divider>.
+
+Elaborating module <Store_FSM>.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 220: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 238: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 256: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 274: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 287: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 295: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 303: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\store_module.v" Line 311: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <FSM_output>.
+
+Elaborating module <display_driver>.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\display_driver.v" Line 100: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:91 - "F:\FPGAcode\vendor_machine\display_driver.v" Line 118: Signal <money> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "F:\FPGAcode\vendor_machine\display_driver.v" Line 120: Signal <money> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\display_driver.v" Line 120: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\vendor_machine\display_driver.v" Line 139: Result of 8-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <decoder_38>.
+
+Elaborating module <seven_seg_driver>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_module>.
+    Related source file is "F:\FPGAcode\vendor_machine\top_module.v".
+    Summary:
+	no macro.
+Unit <top_module> synthesized.
+
+Synthesizing Unit <clk_divider>.
+    Related source file is "F:\FPGAcode\vendor_machine\clk_divider.v".
+        delay = 100000
+    Found 1-bit register for signal <clk_divd>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_2_o_add_3_OUT> created at line 48.
+    Found 32-bit comparator greater for signal <n0000> created at line 44
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <clk_divider> synthesized.
+
+Synthesizing Unit <Store_FSM>.
+    Related source file is "F:\FPGAcode\vendor_machine\store_module.v".
+    Found 1-bit register for signal <two_pressed>.
+    Found 1-bit register for signal <five_pressed>.
+    Found 1-bit register for signal <ten_pressed>.
+    Found 1-bit register for signal <cancel_pressed>.
+    Found 1-bit register for signal <sel0_pressed>.
+    Found 1-bit register for signal <sel1_pressed>.
+    Found 1-bit register for signal <sel2_pressed>.
+    Found 1-bit register for signal <sel3_pressed>.
+    Found 1-bit register for signal <one_pressed>.
+    Found 3-bit register for signal <status>.
+    Found 1-bit register for signal <display_hello>.
+    Found 8-bit register for signal <current_money>.
+    Found 1-bit register for signal <clear_flag>.
+    Found 32-bit register for signal <time_count>.
+    Found 4-bit register for signal <price>.
+    Found 1-bit register for signal <display_price>.
+    Found 8-bit adder for signal <current_money[7]_GND_3_o_add_60_OUT> created at line 287.
+    Found 8-bit adder for signal <current_money[7]_GND_3_o_add_65_OUT> created at line 295.
+    Found 8-bit adder for signal <current_money[7]_GND_3_o_add_70_OUT> created at line 303.
+    Found 8-bit adder for signal <current_money[7]_GND_3_o_add_75_OUT> created at line 311.
+    Found 32-bit adder for signal <time_count[31]_GND_3_o_add_79_OUT> created at line 318.
+    Found 8-bit subtractor for signal <GND_3_o_GND_3_o_sub_22_OUT<7:0>> created at line 220.
+    Found 8-bit subtractor for signal <GND_3_o_GND_3_o_sub_32_OUT<7:0>> created at line 238.
+    Found 8-bit subtractor for signal <GND_3_o_GND_3_o_sub_42_OUT<7:0>> created at line 256.
+    Found 8-bit subtractor for signal <GND_3_o_GND_3_o_sub_52_OUT<7:0>> created at line 274.
+    Found 8-bit comparator greater for signal <GND_3_o_current_money[7]_LessThan_21_o> created at line 214
+    Found 8-bit comparator greater for signal <GND_3_o_current_money[7]_LessThan_31_o> created at line 232
+    Found 8-bit comparator greater for signal <GND_3_o_current_money[7]_LessThan_41_o> created at line 250
+    Found 8-bit comparator greater for signal <GND_3_o_current_money[7]_LessThan_51_o> created at line 268
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  85 Multiplexer(s).
+Unit <Store_FSM> synthesized.
+
+Synthesizing Unit <FSM_output>.
+    Related source file is "F:\FPGAcode\vendor_machine\output.v".
+    Found 8x4-bit Read Only RAM for signal <_n0013>
+    Summary:
+	inferred   1 RAM(s).
+Unit <FSM_output> synthesized.
+
+Synthesizing Unit <display_driver>.
+    Related source file is "F:\FPGAcode\vendor_machine\display_driver.v".
+WARNING:Xst:647 - Input <price> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <point>.
+    Found 3-bit register for signal <pos>.
+    Found 4-bit register for signal <num>.
+    Found 9-bit subtractor for signal <GND_5_o_GND_5_o_sub_11_OUT> created at line 120.
+    Found 3-bit adder for signal <pos[2]_GND_5_o_add_3_OUT> created at line 100.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_12_OUT<3:0>> created at line 120.
+    Found 3x4-bit multiplier for signal <PWR_6_o_m1[3]_MuLt_9_OUT> created at line 120.
+    Found 4-bit 8-to-1 multiplexer for signal <pos[2]_p3[3]_wide_mux_1_OUT> created at line 68.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <display_driver> synthesized.
+
+Synthesizing Unit <mod_8u_3u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_6_o_b[2]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_6_o_b[2]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_6_o_b[2]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[2]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_6_o_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_6_o_add_11_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_6_o_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_6_o_add_15_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_6_o_add_17_OUT> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <mod_8u_3u> synthesized.
+
+Synthesizing Unit <div_8u_3u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_8_o_b[2]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_8_o_b[2]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_8_o_b[2]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[2]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_8_o_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_8_o_add_11_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_8_o_add_13_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_8_o_add_15_OUT[7:0]> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  43 Multiplexer(s).
+Unit <div_8u_3u> synthesized.
+
+Synthesizing Unit <decoder_38>.
+    Related source file is "F:\FPGAcode\vendor_machine\decoder_38.v".
+    Found 8x8-bit Read Only RAM for signal <sel>
+    Summary:
+	inferred   1 RAM(s).
+Unit <decoder_38> synthesized.
+
+Synthesizing Unit <seven_seg_driver>.
+    Related source file is "F:\FPGAcode\vendor_machine\seven_seg_driver.v".
+    Found 8-bit 15-to-1 multiplexer for signal <seg> created at line 45.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <seven_seg_driver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x4-bit single-port Read Only RAM                     : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 4x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 30
+ 10-bit adder                                          : 2
+ 11-bit adder                                          : 2
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 2
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 15
+ 8-bit subtractor                                      : 4
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 1
+# Registers                                            : 21
+ 1-bit register                                        : 14
+ 3-bit register                                        : 2
+ 32-bit register                                       : 2
+ 4-bit register                                        : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 23
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 12
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 208
+ 1-bit 2-to-1 multiplexer                              : 126
+ 3-bit 2-to-1 multiplexer                              : 16
+ 32-bit 2-to-1 multiplexer                             : 14
+ 4-bit 2-to-1 multiplexer                              : 32
+ 4-bit 8-to-1 multiplexer                              : 1
+ 8-bit 15-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 18
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FSM_output>.
+INFO:Xst:3231 - The small RAM <Mram__n0013> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <status>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FSM_output> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_divider>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clk_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decoder_38>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sel> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <pos>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sel>           |          |
+    -----------------------------------------------------------------------
+Unit <decoder_38> synthesized (advanced).
+
+Synthesizing (advanced) Unit <display_driver>.
+The following registers are absorbed into counter <pos>: 1 register on signal <pos>.
+	Multiplier <Mmult_PWR_6_o_m1[3]_MuLt_9_OUT> in block <display_driver> and adder/subtractor <Msub_GND_5_o_GND_5_o_sub_11_OUT_Madd> in block <display_driver> are combined into a MAC<Maddsub_PWR_6_o_m1[3]_MuLt_9_OUT>.
+	The following registers are also absorbed by the MAC: <fsm/current_money> in block <top_module>.
+Unit <display_driver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x4-bit single-port distributed Read Only RAM         : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 4x3-to-4-bit MAC                                      : 1
+# Adders/Subtractors                                   : 27
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 20
+ 8-bit subtractor                                      : 4
+# Counters                                             : 2
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+# Comparators                                          : 23
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 12
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 184
+ 1-bit 2-to-1 multiplexer                              : 126
+ 3-bit 2-to-1 multiplexer                              : 16
+ 32-bit 2-to-1 multiplexer                             : 13
+ 4-bit 2-to-1 multiplexer                              : 10
+ 4-bit 8-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <fsm/current_money_3> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <ddriver/Maddsub_PWR_6_o_m1[3]_MuLt_9_OUT1_0> 
+INFO:Xst:2261 - The FF/Latch <fsm/current_money_0> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <ddriver/Maddsub_PWR_6_o_m1[3]_MuLt_9_OUT1_3> 
+INFO:Xst:2261 - The FF/Latch <fsm/current_money_1> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <ddriver/Maddsub_PWR_6_o_m1[3]_MuLt_9_OUT1_2> 
+INFO:Xst:2261 - The FF/Latch <fsm/current_money_2> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <ddriver/Maddsub_PWR_6_o_m1[3]_MuLt_9_OUT1_1> 
+
+Optimizing unit <top_module> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 0.
+FlipFlop fsm/current_money_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 97
+ Flip-Flops                                            : 97
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 464
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 14
+#      LUT3                        : 27
+#      LUT4                        : 46
+#      LUT5                        : 109
+#      LUT6                        : 122
+#      MUXCY                       : 68
+#      MUXF7                       : 7
+#      VCC                         : 1
+#      XORCY                       : 66
+# FlipFlops/Latches                : 97
+#      FD                          : 78
+#      FDC                         : 8
+#      FDCE                        : 1
+#      FDE                         : 3
+#      FDR                         : 7
+# Clock Buffers                    : 11
+#      BUFG                        : 1
+#      BUFGP                       : 10
+# IO Buffers                       : 21
+#      IBUF                        : 1
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              97  out of  126800     0%  
+ Number of Slice LUTs:                  321  out of  63400     0%  
+    Number used as Logic:               321  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    336
+   Number with an unused Flip Flop:     239  out of    336    71%  
+   Number with an unused LUT:            15  out of    336     4%  
+   Number of fully used LUT-FF pairs:    82  out of    336    24%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    210    14%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:               11  out of     32    34%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+ten_brd                            | BUFGP                  | 1     |
+divd/clk_divd                      | BUFG                   | 55    |
+p2_brd                             | BUFGP                  | 1     |
+p3_brd                             | BUFGP                  | 1     |
+p1_brd                             | BUFGP                  | 1     |
+p0_brd                             | BUFGP                  | 1     |
+five_brd                           | BUFGP                  | 1     |
+two_brd                            | BUFGP                  | 1     |
+one_brd                            | BUFGP                  | 1     |
+cancel_brd                         | BUFGP                  | 1     |
+clk_brd                            | BUFGP                  | 33    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.932ns (Maximum Frequency: 144.250MHz)
+   Minimum input arrival time before clock: 6.632ns
+   Maximum output required time after clock: 1.326ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divd/clk_divd'
+  Clock period: 6.932ns (frequency: 144.250MHz)
+  Total number of paths / destination ports: 1046821 / 64
+-------------------------------------------------------------------------
+Delay:               6.932ns (Levels of Logic = 11)
+  Source:            fsm/current_money_6 (FF)
+  Destination:       fsm/current_money_7 (FF)
+  Source Clock:      divd/clk_divd rising
+  Destination Clock: divd/clk_divd rising
+
+  Data Path: fsm/current_money_6 to fsm/current_money_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             13   0.361   0.739  fsm/current_money_6 (fsm/current_money_6)
+     LUT6:I1->O            1   0.097   0.000  fsm/GND_3_o_current_money[7]_LessThan_21_o2_F (N253)
+     MUXF7:I0->O          16   0.277   0.364  fsm/GND_3_o_current_money[7]_LessThan_21_o2 (fsm/GND_3_o_current_money[7]_LessThan_21_o1)
+     LUT6:I5->O            6   0.097   0.706  fsm/Mmux_current_money[7]_current_money[7]_mux_28_OUT8 (fsm/current_money[7]_current_money[7]_mux_28_OUT<7>)
+     LUT5:I0->O            1   0.097   0.511  fsm/GND_3_o_current_money[7]_LessThan_41_o1_SW5 (N227)
+     LUT6:I3->O           11   0.097   0.557  fsm/Mmux_current_money[7]_current_money[7]_mux_48_OUT31 (fsm/Msub_GND_3_o_GND_3_o_sub_52_OUT<7:0>_lut<2>)
+     LUT6:I3->O            1   0.097   0.295  fsm/GND_3_o_current_money[7]_LessThan_51_o2_SW2 (N85)
+     LUT6:I5->O           18   0.097   0.762  fsm/Mmux_n023121 (fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_lut<1>)
+     LUT5:I0->O            1   0.097   0.295  fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_cy<4>11 (fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_cy<4>)
+     LUT6:I5->O            6   0.097   0.706  fsm/Mmux_n023361 (fsm/Madd_current_money[7]_GND_3_o_add_65_OUT_lut<5>)
+     LUT6:I1->O            1   0.097   0.379  fsm/Mmux_current_money[7]_current_money[7]_mux_103_OUT81_SW1 (N124)
+     LUT6:I4->O            1   0.097   0.000  fsm/Mmux_current_money[7]_current_money[7]_mux_103_OUT81 (fsm/current_money[7]_current_money[7]_mux_103_OUT<7>)
+     FDR:D                     0.008          fsm/current_money_7
+    ----------------------------------------
+    Total                      6.932ns (1.616ns logic, 5.316ns route)
+                                       (23.3% logic, 76.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_brd'
+  Clock period: 3.830ns (frequency: 261.095MHz)
+  Total number of paths / destination ports: 27718 / 34
+-------------------------------------------------------------------------
+Delay:               3.830ns (Levels of Logic = 39)
+  Source:            divd/count_8 (FF)
+  Destination:       divd/count_31 (FF)
+  Source Clock:      clk_brd rising
+  Destination Clock: clk_brd rising
+
+  Data Path: divd/count_8 to divd/count_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.693  divd/count_8 (divd/count_8)
+     LUT5:I0->O            1   0.097   0.000  divd/Mcompar_n0000_lut<0> (divd/Mcompar_n0000_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  divd/Mcompar_n0000_cy<0> (divd/Mcompar_n0000_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcompar_n0000_cy<1> (divd/Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcompar_n0000_cy<2> (divd/Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcompar_n0000_cy<3> (divd/Mcompar_n0000_cy<3>)
+     MUXCY:CI->O          31   0.253   0.486  divd/Mcompar_n0000_cy<4> (divd/Mcompar_n0000_cy<4>)
+     LUT5:I3->O            1   0.097   0.000  divd/Mcount_count_lut<0> (divd/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  divd/Mcount_count_cy<0> (divd/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<1> (divd/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<2> (divd/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<3> (divd/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<4> (divd/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<5> (divd/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<6> (divd/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<7> (divd/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<8> (divd/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<9> (divd/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<10> (divd/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<11> (divd/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<12> (divd/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<13> (divd/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<14> (divd/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<15> (divd/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<16> (divd/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<17> (divd/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<18> (divd/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<19> (divd/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<20> (divd/Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<21> (divd/Mcount_count_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<22> (divd/Mcount_count_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<23> (divd/Mcount_count_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<24> (divd/Mcount_count_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<25> (divd/Mcount_count_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<26> (divd/Mcount_count_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<27> (divd/Mcount_count_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<28> (divd/Mcount_count_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  divd/Mcount_count_cy<29> (divd/Mcount_count_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  divd/Mcount_count_cy<30> (divd/Mcount_count_cy<30>)
+     XORCY:CI->O           1   0.370   0.000  divd/Mcount_count_xor<31> (divd/Mcount_count31)
+     FD:D                      0.008          divd/count_31
+    ----------------------------------------
+    Total                      3.830ns (2.651ns logic, 1.179ns route)
+                                       (69.2% logic, 30.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'divd/clk_divd'
+  Total number of paths / destination ports: 328954 / 28
+-------------------------------------------------------------------------
+Offset:              6.632ns (Levels of Logic = 12)
+  Source:            reset_brd (PAD)
+  Destination:       fsm/current_money_7 (FF)
+  Destination Clock: divd/clk_divd rising
+
+  Data Path: reset_brd to fsm/current_money_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            27   0.001   0.799  reset_brd_IBUF (reset_brd_IBUF)
+     LUT6:I0->O            1   0.097   0.000  fsm/GND_3_o_current_money[7]_LessThan_21_o2_F (N253)
+     MUXF7:I0->O          16   0.277   0.364  fsm/GND_3_o_current_money[7]_LessThan_21_o2 (fsm/GND_3_o_current_money[7]_LessThan_21_o1)
+     LUT6:I5->O            6   0.097   0.706  fsm/Mmux_current_money[7]_current_money[7]_mux_28_OUT8 (fsm/current_money[7]_current_money[7]_mux_28_OUT<7>)
+     LUT5:I0->O            1   0.097   0.511  fsm/GND_3_o_current_money[7]_LessThan_41_o1_SW5 (N227)
+     LUT6:I3->O           11   0.097   0.557  fsm/Mmux_current_money[7]_current_money[7]_mux_48_OUT31 (fsm/Msub_GND_3_o_GND_3_o_sub_52_OUT<7:0>_lut<2>)
+     LUT6:I3->O            1   0.097   0.295  fsm/GND_3_o_current_money[7]_LessThan_51_o2_SW2 (N85)
+     LUT6:I5->O           18   0.097   0.762  fsm/Mmux_n023121 (fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_lut<1>)
+     LUT5:I0->O            1   0.097   0.295  fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_cy<4>11 (fsm/Madd_current_money[7]_GND_3_o_add_60_OUT_cy<4>)
+     LUT6:I5->O            6   0.097   0.706  fsm/Mmux_n023361 (fsm/Madd_current_money[7]_GND_3_o_add_65_OUT_lut<5>)
+     LUT6:I1->O            1   0.097   0.379  fsm/Mmux_current_money[7]_current_money[7]_mux_103_OUT81_SW1 (N124)
+     LUT6:I4->O            1   0.097   0.000  fsm/Mmux_current_money[7]_current_money[7]_mux_103_OUT81 (fsm/current_money[7]_current_money[7]_mux_103_OUT<7>)
+     FDR:D                     0.008          fsm/current_money_7
+    ----------------------------------------
+    Total                      6.632ns (1.256ns logic, 5.376ns route)
+                                       (18.9% logic, 81.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divd/clk_divd'
+  Total number of paths / destination ports: 68 / 20
+-------------------------------------------------------------------------
+Offset:              1.326ns (Levels of Logic = 2)
+  Source:            ddriver/num_3 (FF)
+  Destination:       seg_brd<7> (PAD)
+  Source Clock:      divd/clk_divd rising
+
+  Data Path: ddriver/num_3 to seg_brd<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.361   0.589  ddriver/num_3 (ddriver/num_3)
+     LUT4:I0->O            1   0.097   0.279  ssd/Mmux_seg61 (seg_brd_5_OBUF)
+     OBUF:I->O                 0.000          seg_brd_5_OBUF (seg_brd<5>)
+    ----------------------------------------
+    Total                      1.326ns (0.458ns logic, 0.868ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cancel_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.367|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_brd        |    3.830|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divd/clk_divd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cancel_brd     |    5.649|         |         |         |
+divd/clk_divd  |    6.932|         |         |         |
+five_brd       |    5.649|         |         |         |
+one_brd        |    5.592|         |         |         |
+p0_brd         |    6.895|         |         |         |
+p1_brd         |    5.820|         |         |         |
+p2_brd         |    5.373|         |         |         |
+p3_brd         |    5.091|         |         |         |
+ten_brd        |    5.789|         |         |         |
+two_brd        |    5.800|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock five_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock one_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock p0_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock p1_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock p2_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock p3_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ten_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock two_brd
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divd/clk_divd  |    1.036|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.35 secs
+ 
+--> 
+
+Total memory usage is 4682696 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

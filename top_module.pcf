@@ -1,0 +1,56 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Mar 13 12:10:28 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "two_brd" LOCATE = SITE "L16" LEVEL 1;
+PIN two_brd_pin<0> = BEL "two_brd" PINNAME PAD;
+PIN "two_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "power_brd" LOCATE = SITE "N14" LEVEL 1;
+COMP "p1_brd" LOCATE = SITE "U11" LEVEL 1;
+PIN p1_brd_pin<0> = BEL "p1_brd" PINNAME PAD;
+PIN "p1_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "get_brd" LOCATE = SITE "K15" LEVEL 1;
+COMP "ten_brd" LOCATE = SITE "R15" LEVEL 1;
+PIN ten_brd_pin<0> = BEL "ten_brd" PINNAME PAD;
+PIN "ten_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "p3_brd" LOCATE = SITE "H6" LEVEL 1;
+PIN p3_brd_pin<0> = BEL "p3_brd" PINNAME PAD;
+PIN "p3_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "used_brd" LOCATE = SITE "H17" LEVEL 1;
+COMP "back_brd" LOCATE = SITE "J13" LEVEL 1;
+COMP "clk_brd" LOCATE = SITE "E3" LEVEL 1;
+COMP "reset_brd" LOCATE = SITE "M17" LEVEL 1;
+COMP "cancel_brd" LOCATE = SITE "N17" LEVEL 1;
+PIN cancel_brd_pin<0> = BEL "cancel_brd" PINNAME PAD;
+PIN "cancel_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "one_brd" LOCATE = SITE "J15" LEVEL 1;
+PIN one_brd_pin<0> = BEL "one_brd" PINNAME PAD;
+PIN "one_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "p0_brd" LOCATE = SITE "V10" LEVEL 1;
+PIN p0_brd_pin<0> = BEL "p0_brd" PINNAME PAD;
+PIN "p0_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "p2_brd" LOCATE = SITE "U12" LEVEL 1;
+PIN p2_brd_pin<0> = BEL "p2_brd" PINNAME PAD;
+PIN "p2_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "seg_brd<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "seg_brd<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "seg_brd<7>" LOCATE = SITE "H15" LEVEL 1;
+COMP "seg_brd<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "seg_brd<1>" LOCATE = SITE "R10" LEVEL 1;
+COMP "seg_brd<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "seg_brd<3>" LOCATE = SITE "K13" LEVEL 1;
+COMP "five_brd" LOCATE = SITE "M13" LEVEL 1;
+PIN five_brd_pin<0> = BEL "five_brd" PINNAME PAD;
+PIN "five_brd_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "seg_brd<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "U13" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "K2" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "T14" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P14" LEVEL 1;
+COMP "an<4>" LOCATE = SITE "J14" LEVEL 1;
+COMP "an<5>" LOCATE = SITE "T9" LEVEL 1;
+COMP "an<6>" LOCATE = SITE "J18" LEVEL 1;
+COMP "an<7>" LOCATE = SITE "J17" LEVEL 1;
+SCHEMATIC END;
+

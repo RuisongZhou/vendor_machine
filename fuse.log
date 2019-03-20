@@ -1,0 +1,31 @@
+Running: F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/FPGAcode/vendor_machine/test_isim_beh.exe -prj F:/FPGAcode/vendor_machine/test_beh.prj work.test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/store_module.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/seven_seg_driver.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/output.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/display_driver.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/decoder_38.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/clk_divider.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/top_module.v" into library work
+Analyzing Verilog file "F:/FPGAcode/vendor_machine/test.v" into library work
+Analyzing Verilog file "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module clk_divider
+Compiling module Store_FSM
+Compiling module FSM_output
+Compiling module display_driver
+Compiling module decoder_38
+Compiling module seven_seg_driver
+Compiling module top_module
+Compiling module test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable F:/FPGAcode/vendor_machine/test_isim_beh.exe
+Fuse Memory Usage: 30776 KB
+Fuse CPU Usage: 1156 ms
